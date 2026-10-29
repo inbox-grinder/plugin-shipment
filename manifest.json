@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1",
+  "id": "com.inboxgrinder.examples.shipment",
+  "name": "Shipment tracking",
+  "description": "Tracks labelled shipment updates and approved USPS delivery reports.",
+  "version": "0.1.0",
+  "runtime": "wasm-component",
+  "entrypoint": "shipment.wasm",
+  "publisher": {
+    "name": "Inbox Grinder",
+    "repository": "https://github.com/inbox-grinder/plugin-shipment"
+  },
+  "compatibility": {
+    "inboxGrinderApi": "0.1"
+  },
+  "permissions": [
+    "read_metadata",
+    "read_text_body",
+    "read_html_body"
+  ],
+  "matches": {
+    "subjectContains": [
+      "shipment",
+      "shipping",
+      "delivery",
+      "delivered",
+      "tracking"
+    ]
+  },
+  "contentNeeds": {
+    "metadata": true,
+    "headers": [],
+    "textBody": true,
+    "htmlBody": true,
+    "links": false,
+    "attachments": "none"
+  },
+  "templates": [
+    {
+      "id": "shipment",
+      "kind": "declarative",
+      "path": "template.json"
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "recordContract": {
+    "version": 1,
+    "identityVersion": 1,
+    "updateKeyVersion": 1,
+    "capabilities": [
+      {
+        "name": "records",
+        "version": 1,
+        "required": true
+      },
+      {
+        "name": "remote-service",
+        "version": 1,
+        "required": true
+      },
+      {
+        "name": "scheduled-refresh",
+        "version": 1,
+        "required": true
+      }
+    ],
+    "services": [
+      {
+        "id": "usps",
+        "origin": "https://apis.usps.com",
+        "pathPrefixes": [
+          "/tracking/v3/tracking"
+        ],
+        "minimumIntervalSeconds": 900,
+        "authentication": "bearer"
+      }
+    ],
+    "templates": [
+      {
+        "family": "shipment",
+        "version": 1
+      }
+    ]
+  },
+  "catalogue": {
+    "categories": [
+      "shipping"
+    ]
+  }
+}

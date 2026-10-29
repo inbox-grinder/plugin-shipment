@@ -1,0 +1,15 @@
+{
+  "trackingNumber": "9400000000000000000000",
+  "statusCategory": "Delivered",
+  "status": "Delivered, In/At Mailbox",
+  "destinationCity": "CEDAR RAPIDS",
+  "destinationState": "IA",
+  "trackingEvents": [
+    {
+      "eventType": "Delivered, In/At Mailbox",
+      "eventTimestamp": "2026-10-27T16:00:00Z",
+      "eventCity": "CEDAR RAPIDS",
+      "eventState": "IA"
+    }
+  ]
+}

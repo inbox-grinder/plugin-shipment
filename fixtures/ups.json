@@ -1,0 +1,45 @@
+{
+  "message": {
+    "accountId": "account-personal",
+    "mailboxName": "INBOX",
+    "uid": 7788,
+    "messageId": "<bill-initial@power.example>",
+    "size": 2048,
+    "sourceId": "source-1"
+  },
+  "sender": {
+    "address": "shipping@merchant.example",
+    "domain": "merchant.example"
+  },
+  "recipients": {
+    "to": [
+      {
+        "name": "User",
+        "address": "user@example.com",
+        "domain": "example.com"
+      }
+    ],
+    "cc": [],
+    "bcc": []
+  },
+  "subject": "Shipment tracking update",
+  "date": "2026-10-25T12:00:00Z",
+  "headers": {},
+  "textBody": "Carrier: UPS\nTracking number: 1Z999AA10123456784\nShipment date: 2026-10-24\nStatus: in transit\nExpected delivery: 2026-10-27T18:00:00-04:00\nOrigin: Richmond, VA\nDestination: Cedar Rapids, IA\nLocation: Richmond, VA",
+  "htmlBody": null,
+  "links": [],
+  "attachments": [],
+  "invocation": {
+    "schemaVersion": "1",
+    "config": {},
+    "sources": [
+      {
+        "id": "source-1",
+        "kind": "email"
+      }
+    ],
+    "capabilities": [
+      "records"
+    ]
+  }
+}

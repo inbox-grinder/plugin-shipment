@@ -1,0 +1,45 @@
+{
+  "message": {
+    "accountId": "account-personal",
+    "mailboxName": "INBOX",
+    "uid": 7788,
+    "messageId": "<unrelated-delivery@merchant.example>",
+    "size": 2048,
+    "sourceId": "source-2"
+  },
+  "sender": {
+    "address": "tracking@usps.com",
+    "domain": "usps.com"
+  },
+  "recipients": {
+    "to": [
+      {
+        "name": "User",
+        "address": "user@example.com",
+        "domain": "example.com"
+      }
+    ],
+    "cc": [],
+    "bcc": []
+  },
+  "subject": "Shipment tracking update",
+  "date": "2026-10-28T12:00:00Z",
+  "headers": {},
+  "textBody": "Carrier: USPS\nTracking number: 9400000000000000000000\nShipment date: 2026-10-24\nStatus: delivered\nLocation: Mailbox",
+  "htmlBody": null,
+  "links": [],
+  "attachments": [],
+  "invocation": {
+    "schemaVersion": "1",
+    "config": {},
+    "sources": [
+      {
+        "id": "source-2",
+        "kind": "email"
+      }
+    ],
+    "capabilities": [
+      "records"
+    ]
+  }
+}
